@@ -2,12 +2,14 @@
 
 A static website showcasing the growth stages of independent developers, from inspiration to scaling. Built with Next.js and featuring a responsive, full-screen section design with multilingual support.
 
+[中文文档](README.zh-CN.md) | [English](README.md) | [日本語](README.ja.md)
+
 ![Preview](preview.png)
 
 ## Features
 
 - 📱 **Responsive Design**: Full-screen sections that adapt beautifully to any device
-- 🌐 **Multilingual**: Seamless switching between English and Chinese
+- 🌐 **Multilingual**: Seamless switching between English, Chinese, and Japanese
 - 🎨 **Themed Sections**: Six distinct growth stages, each with its own color theme
   - Inspiration (Blue)
   - Building (Green)
@@ -33,11 +35,43 @@ A static website showcasing the growth stages of independent developers, from in
 │   ├── src/
 │   │   ├── components/    # Reusable UI components
 │   │   ├── lib/          # Utilities and hooks
-│   │   ├── locales/      # Language files (en.ts, zh.ts)
+│   │   ├── locales/      # Language files (en.yaml, zh.yaml, ja.yaml)
 │   │   └── pages/        # Page components
 ├── shared/               # Shared types and schemas
 └── server/              # Server configuration
 ```
+
+## Content Configuration
+
+The website content is managed through YAML files in the `client/src/locales` directory. Each language has its own YAML file with the following structure:
+
+```yaml
+stages:
+  - id: stage-id           # Unique identifier for the stage
+    title: Stage Title     # Display title
+    color: "#ColorCode"    # HEX color code for the stage theme
+    categories:
+      - id: category-id    # Unique identifier for the category
+        title: Category Title
+        description: Category description text
+        icon: 🔍           # Emoji or icon for the category
+        link: https://example.com/category  # External link for more information
+```
+
+### Adding a New Language
+
+1. Create a new YAML file in `client/src/locales` (e.g., `fr.yaml`)
+2. Copy the structure from an existing language file
+3. Translate all content while maintaining the same IDs and structure
+4. Add the language option to `LanguageSwitcher.tsx`
+
+### Modifying Content
+
+- Each stage and category must have a unique ID
+- Colors should be provided in HEX format
+- Icons can be emojis or HTML entities
+- Links should be full URLs
+- Maintain consistent structure across all language files
 
 ## Local Development
 

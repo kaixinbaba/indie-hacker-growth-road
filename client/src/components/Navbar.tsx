@@ -3,11 +3,13 @@ import { useLanguage } from '@/lib/i18n';
 interface NavTitle {
   en: string;
   zh: string;
+  ja: string;
 }
 
 const navTitle: NavTitle = {
   en: "Independent Developer Growth Road",
-  zh: "独立开发者成长之路"
+  zh: "独立开发者成长之路",
+  ja: "インディペンデント開発者の成長への道"
 };
 
 export function Navbar() {

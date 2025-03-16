@@ -10,9 +10,7 @@ import { useLanguage } from '@/lib/i18n';
 const languages = [
   { code: 'en', name: 'English' },
   { code: 'zh', name: '中文' },
-  // 可以在这里添加更多语言
-  // { code: 'ja', name: '日本語' },
-  // { code: 'ko', name: '한국어' },
+  { code: 'ja', name: '日本語' },
 ] as const;
 
 export function LanguageSwitcher() {
