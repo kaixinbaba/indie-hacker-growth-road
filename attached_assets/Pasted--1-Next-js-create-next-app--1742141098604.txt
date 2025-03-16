@@ -1,0 +1,143 @@
+以下是按功能拆分的详细任务清单，按执行顺序排列，存在上下依赖关系：
+
+### 一、项目初始化阶段
+1. **创建Next.js项目基础结构**
+   - 使用`create-next-app`初始化项目
+   - 升级到Next.js 14+版本
+   - 安装tailwindcss并完成基础配置
+   - 清理默认模板中不需要的文件
+
+2. **配置静态导出设置**
+   - 在next.config.js中设置`output: 'export'`
+   - 禁用image optimization（因静态导出限制）
+   - 配置多语言yaml文件加载路径
+
+### 二、多语言系统实现
+3. **建立YAML配置文件体系**
+   - 创建`/locales`目录结构
+   - 编写`en.yaml`和`zh.yaml`模板文件
+   - 定义阶段数据结构和字段规范：
+     ```yaml
+     stages:
+       - id: inspiration
+         name: 灵感
+         color: "#A1B2C3"
+         categories: [...]
+     ```
+
+4. **实现YAML加载器**
+   - 安装`js-yaml`依赖
+   - 创建`lib/i18n.js`处理语言文件加载
+   - 实现getStaticProps中的多语言配置加载：
+     ```js
+     export async function getStaticProps({ locale }) {
+       const config = await loadYamlConfig(locale)
+       return { props: { config } }
+     }
+     ```
+
+### 三、核心页面架构
+5. **构建基础页面框架**
+   - 创建单页布局结构`pages/index.js`
+   - 实现全屏滚动容器：
+     ```jsx
+     <main className="snap-y snap-mandatory h-screen overflow-auto">
+       {stages.map(stage => (
+         <section 
+           key={stage.id}
+           className="h-screen snap-start"
+           style={{backgroundColor: stage.color}}
+         >
+           {/* 阶段内容 */}
+         </section>
+       ))}
+     </main>
+     ```
+
+6. **响应式横向布局系统**
+   - 创建`components/StageGrid.js`
+   - 实现flex/grid混合布局逻辑：
+     ```jsx
+     <div className="flex flex-col md:flex-row gap-4 p-8 h-full">
+       {categories.map(category => (
+         <div className="flex-1 min-w-[300px]">{/* 分类区块 */}</div>
+       ))}
+     </div>
+     ```
+
+### 四、内容呈现层
+7. **分类区块组件开发**
+   - 创建`components/CategoryCard.js`
+   - 实现带图标的内容卡片：
+     ```jsx
+     <a href={link} className="bg-white/20 backdrop-blur-lg p-6 rounded-xl">
+       <Icon className="w-12 h-12 mb-4"/>
+       <h3>{title}</h3>
+       <p>{description}</p>
+     </a>
+     ```
+
+8. **多语言切换器实现**
+   - 创建`components/LanguageSwitcher.js`
+   - 使用前端状态管理语言切换：
+     ```jsx
+     const [currentLang, setLang] = useState('en')
+     // 通过Context传递语言状态
+     ```
+
+### 五、增强交互功能
+9. **滚动导航指示器**
+   - 创建右侧定位的导航锚点
+   - 实现IntersectionObserver监听当前可视区域
+   - 添加平滑滚动效果
+
+10. **移动端优化**
+    - 添加viewport meta标签
+    - 实现触摸滑动检测
+    - 优化分类卡片的点击区域
+
+### 六、样式主题系统
+11. **Tailwind主题扩展**
+    - 在tailwind.config.js中扩展主题色：
+    ```js
+    theme: {
+      extend: {
+        colors: {
+          stageA: '#A1B2C3',
+          stageB: '#B3C4D5',
+          // ...其他阶段颜色
+        }
+      }
+    }
+    ```
+
+12. **动态颜色绑定**
+    - 根据YAML配置注入CSS变量：
+    ```css
+    :root {
+      --stage-a: #{stageAColor};
+      /* 其他阶段变量 */
+    }
+    ```
+
+### 七、最终优化阶段
+13. **静态导出验证**
+    - 运行`next export`测试静态生成
+    - 验证所有链接和资源路径正确性
+    - 添加404页面重定向逻辑
+
+14. **性能优化**
+    - 预加载关键资源
+    - 添加图片懒加载
+    - 实施CSS Purge优化
+
+### 任务依赖关系图
+```
+项目初始化 → 多语言系统 → 核心页面 → 内容呈现 → 交互增强 → 样式主题 → 最终优化
+      ↓            ↓            ↓           ↓           ↓           ↓
+      ├───────────> YAML配置解析必须最先完成
+      ├────────────────────────> 页面框架需要等待核心配置加载
+      └───────────────────────────────────> 所有交互功能依赖DOM结构存在
+```
+
+每个阶段必须按顺序完成，后一阶段的实现依赖前一阶段输出的接口和数据格式。建议按照任务编号顺序开发，在完成基础框架后，可并行开发内容组件和交互功能。
