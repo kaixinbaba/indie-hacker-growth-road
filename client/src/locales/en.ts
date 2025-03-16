@@ -87,7 +87,7 @@ export default {
     {
       id: 'monetization',
       title: 'Monetization',
-      color: '#B91C1C',
+      color: '#FFB800',
       categories: [
         {
           id: 'pricing',

@@ -87,7 +87,7 @@ export default {
     {
       id: 'monetization',
       title: '变现',
-      color: '#B91C1C',
+      color: '#FFB800',
       categories: [
         {
           id: 'pricing',
