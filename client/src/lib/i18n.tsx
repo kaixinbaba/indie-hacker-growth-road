@@ -2,15 +2,10 @@ import { createContext, useContext, useState, useCallback, useMemo, type ReactNo
 import en from '../locales/en';
 import zh from '../locales/zh';
 
-type Translations = {
-  en: typeof en;
-  zh: typeof zh;
-};
-
-const translations: Translations = {
+const translations = {
   en,
   zh,
-};
+} as const;
 
 type Language = keyof typeof translations;
 
@@ -27,7 +22,10 @@ interface I18nProviderProps {
 }
 
 export function I18nProvider({ children }: I18nProviderProps) {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>('en');
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(() => {
+    const savedLanguage = localStorage.getItem('language') as Language;
+    return savedLanguage || 'en';
+  });
 
   const setLanguage = useCallback((lang: Language) => {
     setCurrentLanguage(lang);
@@ -49,7 +47,9 @@ export function I18nProvider({ children }: I18nProviderProps) {
 
 export function useLanguage() {
   const context = useContext(I18nContext);
-  if (!context) throw new Error('useLanguage must be used within I18nProvider');
+  if (!context) {
+    throw new Error('useLanguage must be used within I18nProvider');
+  }
   return context;
 }
 

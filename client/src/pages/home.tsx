@@ -15,7 +15,7 @@ export default function Home() {
         stages={stages} 
         activeStage={activeStage} 
       />
-      
+
       {stages.map((stage) => (
         <StageSection
           key={stage.id}
