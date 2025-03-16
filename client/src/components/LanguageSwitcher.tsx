@@ -14,7 +14,7 @@ export function LanguageSwitcher() {
       variant="ghost"
       size="sm"
       onClick={toggleLanguage}
-      className="fixed top-4 right-4 bg-white/10 backdrop-blur-lg hover:bg-white/20 text-white z-50"
+      className="fixed top-2 right-4 bg-white/10 backdrop-blur-lg hover:bg-white/20 text-white z-50"
     >
       {currentLanguage === 'en' ? '中文' : 'English'}
     </Button>

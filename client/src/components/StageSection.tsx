@@ -41,19 +41,19 @@ export function StageSection({ id, color, title, categories, onInView }: StageSe
     <section
       ref={sectionRef}
       id={id}
-      className="h-screen snap-start flex flex-col relative overflow-hidden"
+      className="min-h-screen snap-start flex flex-col relative overflow-hidden pt-24"
       style={{ backgroundColor: color }}
     >
       <div className="container mx-auto px-4 py-12 flex flex-col h-full">
         <h2 className="text-4xl md:text-6xl font-bold text-white mb-12">{title}</h2>
-        
+
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-min overflow-y-auto">
           {categories.map((category) => (
             <CategoryCard key={category.id} {...category} />
           ))}
         </div>
       </div>
-      
+
       <div 
         className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent pointer-events-none"
         aria-hidden="true"

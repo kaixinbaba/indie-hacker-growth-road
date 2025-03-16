@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="h-screen overflow-y-auto snap-y snap-mandatory pt-16">
-        <LanguageSwitcher />
+      <LanguageSwitcher />
+      <main className="min-h-screen overflow-y-auto snap-y snap-mandatory">
         <ScrollIndicator 
           stages={stages} 
           activeStage={activeStage} 
