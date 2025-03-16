@@ -1,24 +1,35 @@
-import { useTranslations } from '@/lib/i18n';
+import { useLanguage } from '@/lib/i18n';
+
+interface NavTitle {
+  en: string;
+  zh: string;
+}
+
+const navTitle: NavTitle = {
+  en: "Independent Developer Growth Road",
+  zh: "独立开发者成长之路"
+};
 
 export function Navbar() {
-  const { stages } = useTranslations();
-  
+  const { currentLanguage, translations } = useLanguage();
+  const { stages } = translations;
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16">
           {/* Logo/Title */}
-          <a href="#" className="text-2xl font-bold text-white font-serif">
-            独立开发者成长之路
+          <a href="#" className="text-2xl font-bold text-white font-serif mr-8">
+            {navTitle[currentLanguage]}
           </a>
-          
+
           {/* Navigation Links */}
-          <div className="hidden md:flex space-x-4">
+          <div className="flex-1 flex items-center space-x-4 overflow-x-auto">
             {stages.map((stage) => (
               <a
                 key={stage.id}
                 href={`#${stage.id}`}
-                className="text-white/80 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                className="text-white/80 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap"
                 style={{ 
                   backgroundColor: `${stage.color}20`,
                   ['--hover-color' as string]: stage.color 
