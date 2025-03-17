@@ -20,13 +20,15 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center h-16">
-          {/* Logo/Title */}
-          <a href="#" className="text-2xl font-bold text-white font-serif mr-8">
-            {navTitle[currentLanguage]}
-          </a>
+          {/* Logo/Title - 固定宽度 */}
+          <div className="w-64 flex-shrink-0">
+            <a href="#" className="text-2xl font-bold text-white font-serif">
+              {navTitle[currentLanguage]}
+            </a>
+          </div>
 
-          {/* Navigation Links */}
-          <div className="flex-1 flex items-center space-x-4 overflow-x-auto">
+          {/* Navigation Links - 居中对齐 */}
+          <div className="flex-1 flex items-center justify-center space-x-4 overflow-x-auto">
             {stages.map((stage) => (
               <a
                 key={stage.id}

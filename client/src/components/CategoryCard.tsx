@@ -1,4 +1,3 @@
-import { LucideIcon } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
 interface CategoryCardProps {
@@ -17,10 +16,10 @@ export function CategoryCard({ title, description, icon, link, color }: Category
     <Card className="group hover:scale-105 transition-transform duration-200">
       <a href={link} target="_blank" rel="noopener noreferrer">
         <CardContent 
-          className="p-6 backdrop-blur-lg border-l-4"
+          className="p-6 backdrop-blur-lg"
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-            borderLeftColor: color,
+            backgroundColor: `${color}30`,
+            borderLeft: `4px solid ${color}`,
           }}
         >
           <div className="flex items-center gap-4 mb-4">
@@ -31,7 +30,7 @@ export function CategoryCard({ title, description, icon, link, color }: Category
           <div 
             className="flex items-center gap-2 text-sm py-2 px-3 rounded-full w-fit"
             style={{ 
-              backgroundColor: 'rgba(255, 255, 255, 0.15)',
+              backgroundColor: `${color}50`,
               color: 'white'
             }}
           >
