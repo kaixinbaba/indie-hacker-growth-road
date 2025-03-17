@@ -2,7 +2,7 @@
 
 A static website showcasing the growth stages of independent developers, from inspiration to scaling. Built with Next.js and featuring a responsive, full-screen section design with multilingual support.
 
-[中文文档](README.zh-CN.md) | [English](README.md) | [日本語](README.ja.md)
+[中文文档](README.zh-CN.md) | [English](README.md)
 
 ![Preview](preview.png)
 

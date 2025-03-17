@@ -2,7 +2,7 @@
 
 一个展示独立开发者从灵感到规模化的成长阶段的静态网站。使用 Next.js 构建，具有响应式全屏设计和多语言支持。
 
-[中文文档](README.zh-CN.md) | [English](README.md) | [日本語](README.ja.md)
+[中文文档](README.zh-CN.md) | [English](README.md)
 
 ![预览](preview.png)
 
