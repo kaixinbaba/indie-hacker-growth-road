@@ -1,170 +1,170 @@
 export default {
-  stages: [
+  "stages": [
     {
-      id: 'inspiration',
-      title: 'インスピレーション',
-      color: '#1E40AF',
-      categories: [
+      "id": "inspiration",
+      "title": "インスピレーション",
+      "color": "#1E40AF",
+      "categories": [
         {
-          id: 'market-research',
-          title: 'マーケットリサーチ',
-          description: '市場動向を分析し、機会を特定する',
-          icon: '🔍',
-          link: 'https://example.com/market-research'
+          "id": "market-research",
+          "title": "マーケットリサーチ",
+          "description": "Product Huntでトレンドを研究しアイデアを検証",
+          "icon": "🔍",
+          "link": "https://www.producthunt.com"
         },
         {
-          id: 'ideation',
-          title: 'アイデア創出',
-          description: 'ブレインストーミングと製品アイデアの検証',
-          icon: '💡',
-          link: 'https://example.com/ideation'
+          "id": "ideation",
+          "title": "アイデア創出",
+          "description": "Indie Hackersコミュニティに参加してインスピレーションを得る",
+          "icon": "💡",
+          "link": "https://www.indiehackers.com"
         },
         {
-          id: 'validation',
-          title: '検証',
-          description: '仮説の検証とマーケットフィットの確認',
-          icon: '✅',
-          link: 'https://example.com/validation'
+          "id": "validation",
+          "title": "検証",
+          "description": "BetaListで実際のユーザーとアイデアをテスト",
+          "icon": "✅",
+          "link": "https://betalist.com"
         }
       ]
     },
     {
-      id: 'building',
-      title: '構築',
-      color: '#047857',
-      categories: [
+      "id": "building",
+      "title": "構築",
+      "color": "#047857",
+      "categories": [
         {
-          id: 'tech-stack',
-          title: '技術スタック',
-          description: 'プロジェクトに適した技術の選択',
-          icon: '⚙️',
-          link: 'https://example.com/tech-stack'
+          "id": "tech-stack",
+          "title": "技術スタック",
+          "description": "成功企業が使用するモダンな技術スタックを探索",
+          "icon": "⚙️",
+          "link": "https://stackshare.io/stacks"
         },
         {
-          id: 'development',
-          title: '開発',
-          description: 'MVPの構築とフィードバックに基づく改善',
-          icon: '👨‍💻',
-          link: 'https://example.com/development'
+          "id": "development",
+          "title": "開発",
+          "description": "Replitのコラボレーションプラットフォームで学習と開発",
+          "icon": "👨‍💻",
+          "link": "https://replit.com"
         },
         {
-          id: 'testing',
-          title: 'テスト',
-          description: '品質と信頼性の確保',
-          icon: '🧪',
-          link: 'https://example.com/testing'
+          "id": "testing",
+          "title": "テスト",
+          "description": "Cypressで自動テストと品質保証を実施",
+          "icon": "🧪",
+          "link": "https://www.cypress.io"
         }
       ]
     },
     {
-      id: 'launch',
-      title: 'ローンチ',
-      color: '#7C3AED',
-      categories: [
+      "id": "launch",
+      "title": "ローンチ",
+      "color": "#7C3AED",
+      "categories": [
         {
-          id: 'deployment',
-          title: 'デプロイメント',
-          description: 'プロダクトを本番環境にデプロイ',
-          icon: '🚀',
-          link: 'https://example.com/deployment'
+          "id": "deployment",
+          "title": "デプロイメント",
+          "description": "Vercelですぐにアプリをデプロイ",
+          "icon": "🚀",
+          "link": "https://vercel.com"
         },
         {
-          id: 'marketing',
-          title: 'マーケティング',
-          description: '話題を作り、初期ユーザーを獲得',
-          icon: '📢',
-          link: 'https://example.com/marketing'
+          "id": "marketing",
+          "title": "マーケティング",
+          "description": "Product Huntで製品ローンチを共有",
+          "icon": "📢",
+          "link": "https://www.producthunt.com/posts/new"
         },
         {
-          id: 'feedback',
-          title: 'フィードバック',
-          description: 'ユーザーフィードバックの収集と分析',
-          icon: '📝',
-          link: 'https://example.com/feedback'
+          "id": "feedback",
+          "title": "フィードバック",
+          "description": "Cannyでユーザーフィードバックを収集",
+          "icon": "📝",
+          "link": "https://canny.io"
         }
       ]
     },
     {
-      id: 'monetization',
-      title: 'マネタイズ',
-      color: '#FFB800',
-      categories: [
+      "id": "monetization",
+      "title": "マネタイズ",
+      "color": "#FFB800",
+      "categories": [
         {
-          id: 'pricing',
-          title: '価格戦略',
-          description: '価格モデルの定義',
-          icon: '💰',
-          link: 'https://example.com/pricing'
+          "id": "pricing",
+          "title": "価格戦略",
+          "description": "成功企業からSaaS価格戦略を学ぶ",
+          "icon": "💰",
+          "link": "https://www.priceintelligently.com/blog"
         },
         {
-          id: 'revenue',
-          title: '収益源',
-          description: '収入源の多様化',
-          icon: '💎',
-          link: 'https://example.com/revenue'
+          "id": "revenue",
+          "title": "収益源",
+          "description": "Stripeで簡単に決済を受け付け",
+          "icon": "💎",
+          "link": "https://stripe.com"
         },
         {
-          id: 'optimization',
-          title: '最適化',
-          description: 'コンバージョン率の改善',
-          icon: '📈',
-          link: 'https://example.com/optimization'
+          "id": "optimization",
+          "title": "最適化",
+          "description": "Mixpanelでコンバージョンを分析・最適化",
+          "icon": "📈",
+          "link": "https://mixpanel.com"
         }
       ]
     },
     {
-      id: 'operations',
-      title: 'オペレーション',
-      color: '#0D9488',
-      categories: [
+      "id": "operations",
+      "title": "オペレーション",
+      "color": "#0D9488",
+      "categories": [
         {
-          id: 'support',
-          title: 'カスタマーサポート',
-          description: '優れたカスタマーサービスの提供',
-          icon: '🤝',
-          link: 'https://example.com/support'
+          "id": "support",
+          "title": "カスタマーサポート",
+          "description": "Intercomで優れたサポートを提供",
+          "icon": "🤝",
+          "link": "https://www.intercom.com"
         },
         {
-          id: 'maintenance',
-          title: 'メンテナンス',
-          description: 'プロダクトの安定運用',
-          icon: '🔧',
-          link: 'https://example.com/maintenance'
+          "id": "maintenance",
+          "title": "メンテナンス",
+          "description": "Sentryでアプリケーションを監視",
+          "icon": "🔧",
+          "link": "https://sentry.io"
         },
         {
-          id: 'analytics',
-          title: '分析',
-          description: '主要指標の追跡と分析',
-          icon: '📊',
-          link: 'https://example.com/analytics'
+          "id": "analytics",
+          "title": "分析",
+          "description": "Plausible Analyticsで指標を追跡",
+          "icon": "📊",
+          "link": "https://plausible.io"
         }
       ]
     },
     {
-      id: 'growth',
-      title: '成長',
-      color: '#C026D3',
-      categories: [
+      "id": "growth",
+      "title": "成長",
+      "color": "#C026D3",
+      "categories": [
         {
-          id: 'scaling',
-          title: 'スケーリング',
-          description: 'プロダクトとチームの拡大',
-          icon: '📱',
-          link: 'https://example.com/scaling'
+          "id": "scaling",
+          "title": "スケーリング",
+          "description": "AWSスタートアッププログラムでインフラを拡張",
+          "icon": "📱",
+          "link": "https://aws.amazon.com/startups"
         },
         {
-          id: 'partnerships',
-          title: 'パートナーシップ',
-          description: '戦略的パートナーシップの構築',
-          icon: '🤝',
-          link: 'https://example.com/partnerships'
+          "id": "partnerships",
+          "title": "パートナーシップ",
+          "description": "LinkedInで他の創業者とつながる",
+          "icon": "🤝",
+          "link": "https://www.linkedin.com"
         },
         {
-          id: 'expansion',
-          title: '拡大',
-          description: '新市場への展開',
-          icon: '🌍',
-          link: 'https://example.com/expansion'
+          "id": "expansion",
+          "title": "拡大",
+          "description": "G2マーケットリサーチでグローバル市場を探索",
+          "icon": "🌍",
+          "link": "https://www.g2.com/categories"
         }
       ]
     }

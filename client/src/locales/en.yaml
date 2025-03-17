@@ -5,19 +5,19 @@ stages:
     categories:
       - id: market-research
         title: Market Research
-        description: Analyze market trends and identify opportunities
+        description: Research trends and validate ideas on Product Hunt
         icon: 🔍
-        link: https://example.com/market-research
+        link: https://www.producthunt.com
       - id: ideation
         title: Ideation
-        description: Brainstorm and validate product ideas
+        description: Join Indie Hackers community for inspiration and discussions
         icon: 💡
-        link: https://example.com/ideation
+        link: https://www.indiehackers.com
       - id: validation
         title: Validation
-        description: Test assumptions and validate market fit
+        description: Test your ideas with real users on BetaList
         icon: ✅
-        link: https://example.com/validation
+        link: https://betalist.com
 
   - id: building
     title: Building
@@ -25,19 +25,19 @@ stages:
     categories:
       - id: tech-stack
         title: Tech Stack
-        description: Choose the right technologies for your project
+        description: Explore modern tech stacks used by successful companies
         icon: ⚙️
-        link: https://example.com/tech-stack
+        link: https://stackshare.io/stacks
       - id: development
         title: Development
-        description: Build your MVP and iterate based on feedback
+        description: Learn and build with Replit's collaborative platform
         icon: 👨‍💻
-        link: https://example.com/development
+        link: https://replit.com
       - id: testing
         title: Testing
-        description: Ensure quality and reliability
+        description: Automated testing and quality assurance with Cypress
         icon: 🧪
-        link: https://example.com/testing
+        link: https://www.cypress.io
 
   - id: launch
     title: Launch
@@ -45,19 +45,19 @@ stages:
     categories:
       - id: deployment
         title: Deployment
-        description: Deploy your product to production
+        description: Deploy your app instantly with Vercel
         icon: 🚀
-        link: https://example.com/deployment
+        link: https://vercel.com
       - id: marketing
         title: Marketing
-        description: Create buzz and attract early users
+        description: Share your launch on Product Hunt
         icon: 📢
-        link: https://example.com/marketing
+        link: https://www.producthunt.com/posts/new
       - id: feedback
         title: Feedback
-        description: Gather and analyze user feedback
+        description: Collect user feedback with Canny
         icon: 📝
-        link: https://example.com/feedback
+        link: https://canny.io
 
   - id: monetization
     title: Monetization
@@ -65,19 +65,19 @@ stages:
     categories:
       - id: pricing
         title: Pricing Strategy
-        description: Define your pricing model
+        description: Learn SaaS pricing strategies from successful companies
         icon: 💰
-        link: https://example.com/pricing
+        link: https://www.priceintelligently.com/blog
       - id: revenue
         title: Revenue Streams
-        description: Diversify your income sources
+        description: Accept payments easily with Stripe
         icon: 💎
-        link: https://example.com/revenue
+        link: https://stripe.com
       - id: optimization
         title: Optimization
-        description: Improve conversion rates
+        description: Analyze and optimize conversion with Mixpanel
         icon: 📈
-        link: https://example.com/optimization
+        link: https://mixpanel.com
 
   - id: operations
     title: Operations
@@ -85,19 +85,19 @@ stages:
     categories:
       - id: support
         title: Customer Support
-        description: Provide excellent customer service
+        description: Provide excellent support with Intercom
         icon: 🤝
-        link: https://example.com/support
+        link: https://www.intercom.com
       - id: maintenance
         title: Maintenance
-        description: Keep your product running smoothly
+        description: Monitor your application with Sentry
         icon: 🔧
-        link: https://example.com/maintenance
+        link: https://sentry.io
       - id: analytics
         title: Analytics
-        description: Track and analyze key metrics
+        description: Track metrics with Plausible Analytics
         icon: 📊
-        link: https://example.com/analytics
+        link: https://plausible.io
 
   - id: growth
     title: Growth
@@ -105,16 +105,16 @@ stages:
     categories:
       - id: scaling
         title: Scaling
-        description: Scale your product and team
+        description: Scale your infrastructure with AWS Startup Program
         icon: 📱
-        link: https://example.com/scaling
+        link: https://aws.amazon.com/startups
       - id: partnerships
         title: Partnerships
-        description: Build strategic partnerships
+        description: Connect with other founders on LinkedIn
         icon: 🤝
-        link: https://example.com/partnerships
+        link: https://www.linkedin.com
       - id: expansion
         title: Expansion
-        description: Expand to new markets
+        description: Explore global markets with G2 Market Research
         icon: 🌍
-        link: https://example.com/expansion
+        link: https://www.g2.com/categories

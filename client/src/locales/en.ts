@@ -1,170 +1,170 @@
 export default {
-  stages: [
+  "stages": [
     {
-      id: 'inspiration',
-      title: 'Inspiration',
-      color: '#1E40AF',
-      categories: [
+      "id": "inspiration",
+      "title": "Inspiration",
+      "color": "#1E40AF",
+      "categories": [
         {
-          id: 'market-research',
-          title: 'Market Research',
-          description: 'Analyze market trends and identify opportunities',
-          icon: '🔍',
-          link: 'https://example.com/market-research'
+          "id": "market-research",
+          "title": "Market Research",
+          "description": "Research trends and validate ideas on Product Hunt",
+          "icon": "🔍",
+          "link": "https://www.producthunt.com"
         },
         {
-          id: 'ideation',
-          title: 'Ideation',
-          description: 'Brainstorm and validate product ideas',
-          icon: '💡',
-          link: 'https://example.com/ideation'
+          "id": "ideation",
+          "title": "Ideation",
+          "description": "Join Indie Hackers community for inspiration and discussions",
+          "icon": "💡",
+          "link": "https://www.indiehackers.com"
         },
         {
-          id: 'validation',
-          title: 'Validation',
-          description: 'Test assumptions and validate market fit',
-          icon: '✅',
-          link: 'https://example.com/validation'
+          "id": "validation",
+          "title": "Validation",
+          "description": "Test your ideas with real users on BetaList",
+          "icon": "✅",
+          "link": "https://betalist.com"
         }
       ]
     },
     {
-      id: 'building',
-      title: 'Building',
-      color: '#047857',
-      categories: [
+      "id": "building",
+      "title": "Building",
+      "color": "#047857",
+      "categories": [
         {
-          id: 'tech-stack',
-          title: 'Tech Stack',
-          description: 'Choose the right technologies for your project',
-          icon: '⚙️',
-          link: 'https://example.com/tech-stack'
+          "id": "tech-stack",
+          "title": "Tech Stack",
+          "description": "Explore modern tech stacks used by successful companies",
+          "icon": "⚙️",
+          "link": "https://stackshare.io/stacks"
         },
         {
-          id: 'development',
-          title: 'Development',
-          description: 'Build your MVP and iterate based on feedback',
-          icon: '👨‍💻',
-          link: 'https://example.com/development'
+          "id": "development",
+          "title": "Development",
+          "description": "Learn and build with Replit's collaborative platform",
+          "icon": "👨‍💻",
+          "link": "https://replit.com"
         },
         {
-          id: 'testing',
-          title: 'Testing',
-          description: 'Ensure quality and reliability',
-          icon: '🧪',
-          link: 'https://example.com/testing'
+          "id": "testing",
+          "title": "Testing",
+          "description": "Automated testing and quality assurance with Cypress",
+          "icon": "🧪",
+          "link": "https://www.cypress.io"
         }
       ]
     },
     {
-      id: 'launch',
-      title: 'Launch',
-      color: '#7C3AED',
-      categories: [
+      "id": "launch",
+      "title": "Launch",
+      "color": "#7C3AED",
+      "categories": [
         {
-          id: 'deployment',
-          title: 'Deployment',
-          description: 'Deploy your product to production',
-          icon: '🚀',
-          link: 'https://example.com/deployment'
+          "id": "deployment",
+          "title": "Deployment",
+          "description": "Deploy your app instantly with Vercel",
+          "icon": "🚀",
+          "link": "https://vercel.com"
         },
         {
-          id: 'marketing',
-          title: 'Marketing',
-          description: 'Create buzz and attract early users',
-          icon: '📢',
-          link: 'https://example.com/marketing'
+          "id": "marketing",
+          "title": "Marketing",
+          "description": "Share your launch on Product Hunt",
+          "icon": "📢",
+          "link": "https://www.producthunt.com/posts/new"
         },
         {
-          id: 'feedback',
-          title: 'Feedback',
-          description: 'Gather and analyze user feedback',
-          icon: '📝',
-          link: 'https://example.com/feedback'
+          "id": "feedback",
+          "title": "Feedback",
+          "description": "Collect user feedback with Canny",
+          "icon": "📝",
+          "link": "https://canny.io"
         }
       ]
     },
     {
-      id: 'monetization',
-      title: 'Monetization',
-      color: '#FFB800',
-      categories: [
+      "id": "monetization",
+      "title": "Monetization",
+      "color": "#FFB800",
+      "categories": [
         {
-          id: 'pricing',
-          title: 'Pricing Strategy',
-          description: 'Define your pricing model',
-          icon: '💰',
-          link: 'https://example.com/pricing'
+          "id": "pricing",
+          "title": "Pricing Strategy",
+          "description": "Learn SaaS pricing strategies from successful companies",
+          "icon": "💰",
+          "link": "https://www.priceintelligently.com/blog"
         },
         {
-          id: 'revenue',
-          title: 'Revenue Streams',
-          description: 'Diversify your income sources',
-          icon: '💎',
-          link: 'https://example.com/revenue'
+          "id": "revenue",
+          "title": "Revenue Streams",
+          "description": "Accept payments easily with Stripe",
+          "icon": "💎",
+          "link": "https://stripe.com"
         },
         {
-          id: 'optimization',
-          title: 'Optimization',
-          description: 'Improve conversion rates',
-          icon: '📈',
-          link: 'https://example.com/optimization'
+          "id": "optimization",
+          "title": "Optimization",
+          "description": "Analyze and optimize conversion with Mixpanel",
+          "icon": "📈",
+          "link": "https://mixpanel.com"
         }
       ]
     },
     {
-      id: 'operations',
-      title: 'Operations',
-      color: '#0D9488',
-      categories: [
+      "id": "operations",
+      "title": "Operations",
+      "color": "#0D9488",
+      "categories": [
         {
-          id: 'support',
-          title: 'Customer Support',
-          description: 'Provide excellent customer service',
-          icon: '🤝',
-          link: 'https://example.com/support'
+          "id": "support",
+          "title": "Customer Support",
+          "description": "Provide excellent support with Intercom",
+          "icon": "🤝",
+          "link": "https://www.intercom.com"
         },
         {
-          id: 'maintenance',
-          title: 'Maintenance',
-          description: 'Keep your product running smoothly',
-          icon: '🔧',
-          link: 'https://example.com/maintenance'
+          "id": "maintenance",
+          "title": "Maintenance",
+          "description": "Monitor your application with Sentry",
+          "icon": "🔧",
+          "link": "https://sentry.io"
         },
         {
-          id: 'analytics',
-          title: 'Analytics',
-          description: 'Track and analyze key metrics',
-          icon: '📊',
-          link: 'https://example.com/analytics'
+          "id": "analytics",
+          "title": "Analytics",
+          "description": "Track metrics with Plausible Analytics",
+          "icon": "📊",
+          "link": "https://plausible.io"
         }
       ]
     },
     {
-      id: 'growth',
-      title: 'Growth',
-      color: '#C026D3',
-      categories: [
+      "id": "growth",
+      "title": "Growth",
+      "color": "#C026D3",
+      "categories": [
         {
-          id: 'scaling',
-          title: 'Scaling',
-          description: 'Scale your product and team',
-          icon: '📱',
-          link: 'https://example.com/scaling'
+          "id": "scaling",
+          "title": "Scaling",
+          "description": "Scale your infrastructure with AWS Startup Program",
+          "icon": "📱",
+          "link": "https://aws.amazon.com/startups"
         },
         {
-          id: 'partnerships',
-          title: 'Partnerships',
-          description: 'Build strategic partnerships',
-          icon: '🤝',
-          link: 'https://example.com/partnerships'
+          "id": "partnerships",
+          "title": "Partnerships",
+          "description": "Connect with other founders on LinkedIn",
+          "icon": "🤝",
+          "link": "https://www.linkedin.com"
         },
         {
-          id: 'expansion',
-          title: 'Expansion',
-          description: 'Expand to new markets',
-          icon: '🌍',
-          link: 'https://example.com/expansion'
+          "id": "expansion",
+          "title": "Expansion",
+          "description": "Explore global markets with G2 Market Research",
+          "icon": "🌍",
+          "link": "https://www.g2.com/categories"
         }
       ]
     }
