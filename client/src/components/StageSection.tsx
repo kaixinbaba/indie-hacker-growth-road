@@ -16,15 +16,13 @@ interface StageSectionProps {
 }
 
 function generateVariantColors(baseColor: string, count: number): string[] {
-  // 使用 HSL 生成同色系的变体颜色
-  const hue = parseInt(baseColor.slice(1, 3), 16);
-  const sat = parseInt(baseColor.slice(3, 5), 16);
-  const light = parseInt(baseColor.slice(5, 7), 16);
-
-  return Array.from({ length: count }, (_, i) => {
-    const variance = (i - count / 2) * 20;
-    return baseColor; // 临时返回基础色，后续可以基于 HSL 生成变体
-  });
+  // 生成同色系但亮度不同的变体颜色
+  const colors = [];
+  for (let i = 0; i < count; i++) {
+    const opacity = 0.7 + (i * 0.1); // 0.7, 0.8, 0.9
+    colors.push(`${baseColor}${Math.floor(opacity * 255).toString(16)}`);
+  }
+  return colors;
 }
 
 export function StageSection({ id, color, title, categories, onInView }: StageSectionProps) {
@@ -55,15 +53,13 @@ export function StageSection({ id, color, title, categories, onInView }: StageSe
       ref={sectionRef}
       id={id}
       className="min-h-screen snap-start flex flex-col relative overflow-hidden pt-24"
-      style={{ backgroundColor: `${color}05` }}
+      style={{ 
+        backgroundColor: color,
+        color: 'white'
+      }}
     >
       <div className="container mx-auto px-4 py-12 flex flex-col h-full">
-        <h2 
-          className="text-4xl md:text-6xl font-bold mb-12"
-          style={{ color }}
-        >
-          {title}
-        </h2>
+        <h2 className="text-4xl md:text-6xl font-bold mb-12 text-white">{title}</h2>
 
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-min overflow-y-auto">
           {categories.map((category, index) => (
@@ -77,7 +73,7 @@ export function StageSection({ id, color, title, categories, onInView }: StageSe
       </div>
 
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-black/5 to-transparent pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent pointer-events-none"
         aria-hidden="true"
       />
     </section>

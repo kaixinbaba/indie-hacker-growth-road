@@ -17,22 +17,22 @@ export function CategoryCard({ title, description, icon, link, color }: Category
     <Card className="group hover:scale-105 transition-transform duration-200">
       <a href={link} target="_blank" rel="noopener noreferrer">
         <CardContent 
-          className="p-6"
+          className="p-6 backdrop-blur-lg border-l-4"
           style={{
-            background: `linear-gradient(135deg, ${color}10, ${color}20)`,
-            borderLeft: `4px solid ${color}`,
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            borderLeftColor: color,
           }}
         >
           <div className="flex items-center gap-4 mb-4">
             <span className="text-3xl" dangerouslySetInnerHTML={{ __html: icon }} />
-            <h3 className="text-xl font-semibold" style={{ color }}>{title}</h3>
+            <h3 className="text-xl font-semibold text-white">{title}</h3>
           </div>
-          <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
+          <p className="text-white/80 mb-4">{description}</p>
           <div 
             className="flex items-center gap-2 text-sm py-2 px-3 rounded-full w-fit"
             style={{ 
-              backgroundColor: `${color}15`,
-              color: color
+              backgroundColor: 'rgba(255, 255, 255, 0.15)',
+              color: 'white'
             }}
           >
             <span>访问 {resourceName}</span>
