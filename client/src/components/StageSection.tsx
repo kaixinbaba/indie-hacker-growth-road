@@ -16,10 +16,10 @@ interface StageSectionProps {
 }
 
 function generateVariantColors(baseColor: string, count: number): string[] {
-  // 生成同色系但亮度不同的变体颜色
+  // 生成同色系但不同饱和度的变体颜色
   const colors = [];
   for (let i = 0; i < count; i++) {
-    const opacity = 0.7 + (i * 0.1); // 0.7, 0.8, 0.9
+    const opacity = 0.2 + (i * 0.1); // 0.2, 0.3, 0.4 - 更浅的颜色
     colors.push(`${baseColor}${Math.floor(opacity * 255).toString(16)}`);
   }
   return colors;
@@ -54,26 +54,30 @@ export function StageSection({ id, color, title, categories, onInView }: StageSe
       id={id}
       className="min-h-screen snap-start flex flex-col relative overflow-hidden pt-24"
       style={{ 
-        backgroundColor: color,
-        color: 'white'
+        backgroundColor: `${color}10`,  // 使用非常浅的背景色
       }}
     >
       <div className="container mx-auto px-4 py-12 flex flex-col h-full">
-        <h2 className="text-4xl md:text-6xl font-bold mb-12 text-white">{title}</h2>
+        <h2 
+          className="text-4xl md:text-6xl font-bold mb-12"
+          style={{ color }}  // 使用主题色作为标题颜色
+        >
+          {title}
+        </h2>
 
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-min overflow-y-auto">
           {categories.map((category, index) => (
             <CategoryCard 
               key={category.id} 
               {...category} 
-              color={variantColors[index]}
+              color={color}  // 传递主题色给卡片
             />
           ))}
         </div>
       </div>
 
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"
         aria-hidden="true"
       />
     </section>

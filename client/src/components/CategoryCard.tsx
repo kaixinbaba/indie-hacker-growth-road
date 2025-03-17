@@ -18,21 +18,21 @@ export function CategoryCard({ title, description, icon, link, color }: Category
         <CardContent 
           className="p-6 backdrop-blur-lg"
           style={{
-            backgroundColor: `${color}10`,
+            backgroundColor: 'white',
             borderLeft: `4px solid ${color}`,
-            boxShadow: `inset 0 2px 4px ${color}30`
+            boxShadow: `0 2px 4px ${color}20`
           }}
         >
           <div className="flex items-center gap-4 mb-4">
             <span className="text-3xl" dangerouslySetInnerHTML={{ __html: icon }} />
-            <h3 className="text-xl font-semibold text-white">{title}</h3>
+            <h3 className="text-xl font-semibold" style={{ color }}>{title}</h3>
           </div>
-          <p className="text-white/80 mb-4">{description}</p>
+          <p className="text-gray-600 mb-4">{description}</p>
           <div 
             className="flex items-center gap-2 text-sm py-2 px-3 rounded-full w-fit"
             style={{ 
-              backgroundColor: `${color}30`,
-              color: 'white'
+              backgroundColor: `${color}20`,
+              color: color
             }}
           >
             <span>访问 {resourceName}</span>
