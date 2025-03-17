@@ -7,9 +7,9 @@ interface NavTitle {
 }
 
 const navTitle: NavTitle = {
-  en: "Independent Developer Growth Road",
+  en: "Indie Hacker Growth Road",
   zh: "独立开发者成长之路",
-  ja: "インディペンデント開発者の成長への道"
+  ja: "個人開発者の成長への道"
 };
 
 export function Navbar() {

@@ -4,13 +4,27 @@ interface CategoryCardProps {
   title: string;
   description: string;
   icon: string;
+  iconType?: 'emoji' | 'image';  // 添加 iconType
   link: string;
   color: string;
 }
 
-export function CategoryCard({ title, description, icon, link, color }: CategoryCardProps) {
-  // 从链接中提取域名作为资源名称
+export function CategoryCard({ title, description, icon, iconType = 'emoji', link, color }: CategoryCardProps) {
   const resourceName = new URL(link).hostname.replace('www.', '');
+
+  // 根据 iconType 渲染不同的图标
+  const renderIcon = () => {
+    if (iconType === 'image') {
+      return (
+        <img 
+          src={icon} 
+          alt={title} 
+          className="w-8 h-8 object-contain"
+        />
+      );
+    }
+    return <span className="text-3xl" dangerouslySetInnerHTML={{ __html: icon }} />;
+  };
 
   return (
     <Card className="group hover:scale-105 transition-transform duration-200">
@@ -24,7 +38,7 @@ export function CategoryCard({ title, description, icon, link, color }: Category
           }}
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-3xl" dangerouslySetInnerHTML={{ __html: icon }} />
+            {renderIcon()}  {/* 使用新的渲染方法 */}
             <h3 className="text-xl font-semibold" style={{ color }}>{title}</h3>
           </div>
           <p className="text-gray-600 mb-4">{description}</p>
