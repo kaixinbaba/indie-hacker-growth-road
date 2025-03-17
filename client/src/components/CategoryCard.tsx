@@ -1,18 +1,18 @@
 import { Card, CardContent } from './ui/card';
 
 interface CategoryCardProps {
+  id: string;
   title: string;
   description: string;
   icon: string;
-  iconType?: 'emoji' | 'image';  // 添加 iconType
+  iconType: string;
   link: string;
   color: string;
 }
 
-export function CategoryCard({ title, description, icon, iconType = 'emoji', link, color }: CategoryCardProps) {
+export function CategoryCard({ title, description, icon, iconType, link, color }: CategoryCardProps) {
   const resourceName = new URL(link).hostname.replace('www.', '');
 
-  // 根据 iconType 渲染不同的图标
   const renderIcon = () => {
     if (iconType === 'image') {
       return (
@@ -38,7 +38,7 @@ export function CategoryCard({ title, description, icon, iconType = 'emoji', lin
           }}
         >
           <div className="flex items-center gap-4 mb-4">
-            {renderIcon()}  {/* 使用新的渲染方法 */}
+            {renderIcon()}
             <h3 className="text-xl font-semibold" style={{ color }}>{title}</h3>
           </div>
           <p className="text-gray-600 mb-4">{description}</p>
