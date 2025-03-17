@@ -17,15 +17,15 @@ A static website showcasing the growth stages of independent developers, from in
   - Monetization (Gold)
   - Operations (Teal)
   - Growth (Pink)
-- 📦 **Static Generation**: Fast loading and easy deployment with static site generation
+- 📦 **Static Generation**: Fast loading and easy deployment
 - 🔄 **Smooth Navigation**: Intuitive scrolling with stage indicators
 
 ## Tech Stack
 
-- Next.js 14+
+- React + Vite
 - TailwindCSS
-- React
 - TypeScript
+- Express
 
 ## Project Structure
 
@@ -35,32 +35,47 @@ A static website showcasing the growth stages of independent developers, from in
 │   ├── src/
 │   │   ├── components/    # Reusable UI components
 │   │   ├── lib/          # Utilities and hooks
-│   │   ├── locales/      # Language files (en.yaml, zh.yaml, ja.yaml)
+│   │   ├── locales/      # Locale files (en.ts, zh.ts, ja.ts)
 │   │   └── pages/        # Page components
 ├── shared/               # Shared types and schemas
 └── server/              # Server configuration
 ```
 
-## Content Configuration
+## Content Structure
 
-The website content is managed through YAML files in the `client/src/locales` directory. Each language has its own YAML file with the following structure:
+The website content is structured in TypeScript files under `client/src/locales`. Each language has its own file with the following structure:
 
-```yaml
-stages:
-  - id: stage-id           # Unique identifier for the stage
-    title: Stage Title     # Display title
-    color: "#ColorCode"    # HEX color code for the stage theme
-    categories:
-      - id: category-id    # Unique identifier for the category
-        title: Category Title
-        description: Category description text
-        icon: 🔍           # Emoji or icon for the category
-        link: https://example.com/category  # External link for more information
+```typescript
+export default {
+  stages: [
+    {
+      id: "stage-id",           // Unique identifier for the stage
+      title: "Stage Title",     // Display title
+      color: "#ColorCode",      // HEX color code for the stage theme
+      categories: [
+        {
+          id: "category-id",    // Unique identifier for the category
+          title: "Category Title",
+          resources: [
+            {
+              id: "resource-id",
+              title: "Resource Title",
+              description: "Resource description",
+              icon: "https://example.com/icon.png",
+              iconType: "image",
+              link: "https://example.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ### Adding a New Language
 
-1. Create a new YAML file in `client/src/locales` (e.g., `fr.yaml`)
+1. Create a new `.ts` file in `client/src/locales` (e.g., `fr.ts`)
 2. Copy the structure from an existing language file
 3. Translate all content while maintaining the same IDs and structure
 4. Add the language option to `LanguageSwitcher.tsx`
@@ -69,7 +84,7 @@ stages:
 
 - Each stage and category must have a unique ID
 - Colors should be provided in HEX format
-- Icons can be emojis or HTML entities
+- Icons should be image URLs
 - Links should be full URLs
 - Maintain consistent structure across all language files
 
@@ -91,11 +106,18 @@ stages:
    npm run dev
    ```
 
-4. Open [http://localhost:5000](http://localhost:5000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Inspiration
+## Deployment
 
-This project aims to guide independent developers through their journey from initial inspiration to successful growth. Each section represents a crucial stage in the indie hacker journey, providing resources and insights for each phase of development.
+This project can be deployed to Vercel:
+
+1. Push your code to GitHub
+2. Import the project in Vercel
+3. Configure the build settings:
+   - Framework Preset: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist/public`
 
 ## License
 
