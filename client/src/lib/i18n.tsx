@@ -1,10 +1,12 @@
 import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from 'react';
 import en from '../locales/en';
 import zh from '../locales/zh';
+import ja from '../locales/ja';
 
 const translations = {
   en,
   zh,
+  ja,
 } as const;
 
 type Language = keyof typeof translations;
