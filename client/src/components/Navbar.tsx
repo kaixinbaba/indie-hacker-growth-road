@@ -21,8 +21,8 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center h-16">
           {/* Logo/Title - 固定宽度 */}
-          <div className="w-64 flex-shrink-0">
-            <a href="#" className="text-2xl font-bold text-white font-serif">
+          <div className="w-96 flex-shrink-0 truncate">
+            <a href="#" className="text-2xl font-bold text-white font-serif whitespace-nowrap">
               {navTitle[currentLanguage]}
             </a>
           </div>

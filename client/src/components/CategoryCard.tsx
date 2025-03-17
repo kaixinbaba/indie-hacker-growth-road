@@ -18,8 +18,9 @@ export function CategoryCard({ title, description, icon, link, color }: Category
         <CardContent 
           className="p-6 backdrop-blur-lg"
           style={{
-            backgroundColor: `${color}30`,
+            backgroundColor: `${color}10`,
             borderLeft: `4px solid ${color}`,
+            boxShadow: `inset 0 2px 4px ${color}30`
           }}
         >
           <div className="flex items-center gap-4 mb-4">
@@ -30,7 +31,7 @@ export function CategoryCard({ title, description, icon, link, color }: Category
           <div 
             className="flex items-center gap-2 text-sm py-2 px-3 rounded-full w-fit"
             style={{ 
-              backgroundColor: `${color}50`,
+              backgroundColor: `${color}30`,
               color: 'white'
             }}
           >
