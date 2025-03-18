@@ -111,7 +111,7 @@ stages:
           - id: lemonsqueezy
             title: LemonSqueezy
             description: Quickly set up digital product payments with LemonSqueezy
-            icon: https://www.lemonsqueezy.com/favicon.ico
+            icon: https://cdn.prod.website-files.com/6347244ba8d63489ba51c08e/6347244ba8d6341f3f51c0da_63071714fb42aa33dd948e49_favixon.webp
             iconType: image
             link: https://www.lemonsqueezy.com
 

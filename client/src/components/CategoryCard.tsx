@@ -27,7 +27,7 @@ interface ResourceListProps {
 // 原来的大卡片组件
 export function CategoryCard({ title, description, icon, iconType, link, color }: CategoryCardProps) {
   return (
-    <Card className="group hover:scale-105 transition-transform duration-200">
+    <Card className="group hover:scale-105 transition-transform duration-200 transform-gpu">
       <a href={link} target="_blank" rel="noopener noreferrer">
         <CardContent 
           className="p-3"
@@ -43,6 +43,7 @@ export function CategoryCard({ title, description, icon, iconType, link, color }
                 src={icon} 
                 alt={title} 
                 className="w-5 h-5 object-contain"
+                loading="lazy" // 添加懒加载
               />
             ) : (
               <span className="text-xl" dangerouslySetInnerHTML={{ __html: icon }} />
