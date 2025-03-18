@@ -24,6 +24,14 @@ export default {
               "icon": "https://www.indiehackers.com/images/favicons/favicon--192x192.png",
               "iconType": "image",
               "link": "https://www.indiehackers.com"
+            },
+            {
+              "id": "hackernews",
+              "title": "Hacker News",
+              "description": "在 Hacker News 上与全球技术社区交流",
+              "icon": "https://news.ycombinator.com/favicon.ico",
+              "iconType": "image",
+              "link": "https://news.ycombinator.com"
             }
           ]
         },
@@ -56,7 +64,7 @@ export default {
               "id": "replit",
               "title": "Replit",
               "description": "使用 Replit 的协作平台学习和构建",
-              "icon": "https://replit.com/public/icons/favicon-32.png",
+              "icon": "https://cdn.replit.com/dotcom/favicon-196.png",
               "iconType": "image",
               "link": "https://replit.com"
             },
@@ -106,20 +114,6 @@ export default {
           ]
         },
         {
-          "id": "marketing-platforms",
-          "title": "营销平台",
-          "resources": [
-            {
-              "id": "producthunt-launch",
-              "title": "Product Hunt",
-              "description": "在 Product Hunt 上分享你的产品发布",
-              "icon": "https://ph-static.imgix.net/ph-favicon-32x32.png",
-              "iconType": "image",
-              "link": "https://www.producthunt.com/posts/new"
-            }
-          ]
-        },
-        {
           "id": "feedback-tools",
           "title": "反馈工具",
           "resources": [
@@ -127,7 +121,7 @@ export default {
               "id": "canny",
               "title": "Canny",
               "description": "使用 Canny 收集用户反馈",
-              "icon": "https://canny.io/favicon.ico",
+              "icon": "https://assets.canny.io/a823786ff8c564b3f50b4a11137df6157e9e58ff/logo-icon.png",
               "iconType": "image",
               "link": "https://canny.io"
             }
@@ -165,6 +159,36 @@ export default {
               "icon": "https://stripe.com/favicon.ico",
               "iconType": "image",
               "link": "https://stripe.com"
+            },
+            {
+              "id": "lemonsqueezy",
+              "title": "LemonSqueezy",
+              "description": "使用 LemonSqueezy 快速设置数字产品支付",
+              "icon": "https://www.lemonsqueezy.com/favicon.ico",
+              "iconType": "image",
+              "link": "https://www.lemonsqueezy.com"
+            }
+          ]
+        },
+        {
+          "id": "advertising",
+          "title": "广告变现",
+          "resources": [
+            {
+              "id": "google-adsense",
+              "title": "Google AdSense",
+              "description": "通过 Google AdSense 将流量转化为收入",
+              "icon": "https://www.google.com/adsense/start/images/favicon.ico",
+              "iconType": "image",
+              "link": "https://www.google.com/adsense"
+            },
+            {
+              "id": "baidu-union",
+              "title": "百度联盟",
+              "description": "接入百度联盟广告实现流量变现",
+              "icon": "https://union.baidu.com/favicon.ico",
+              "iconType": "image",
+              "link": "https://union.baidu.com"
             }
           ]
         },
@@ -190,44 +214,56 @@ export default {
       "color": "#0D9488",
       "categories": [
         {
-          "id": "customer-support",
-          "title": "客户支持",
+          "id": "community",
+          "title": "社区",
           "resources": [
             {
-              "id": "intercom",
-              "title": "Intercom",
-              "description": "使用 Intercom 提供出色的支持服务",
-              "icon": "https://www.intercom.com/favicon.ico",
+              "id": "producthunt",
+              "title": "Product Hunt",
+              "description": "在 Product Hunt 上研究趋势和验证想法",
+              "icon": "https://ph-static.imgix.net/ph-favicon-brand-500.ico?auto=format",
               "iconType": "image",
-              "link": "https://www.intercom.com"
-            }
-          ]
-        },
-        {
-          "id": "monitoring",
-          "title": "监控",
-          "resources": [
+              "link": "https://www.producthunt.com"
+            },
             {
-              "id": "sentry",
-              "title": "Sentry",
-              "description": "使用 Sentry 监控你的应用",
-              "icon": "https://sentry.io/favicon.ico",
+              "id": "indiehackers",
+              "title": "Indie Hackers",
+              "description": "加入 Indie Hackers 社区获取灵感和讨论",
+              "icon": "https://www.indiehackers.com/images/favicons/favicon--192x192.png",
               "iconType": "image",
-              "link": "https://sentry.io"
-            }
-          ]
-        },
-        {
-          "id": "analytics",
-          "title": "分析",
-          "resources": [
+              "link": "https://www.indiehackers.com"
+            },
             {
-              "id": "plausible",
-              "title": "Plausible Analytics",
-              "description": "使用 Plausible Analytics 跟踪指标",
-              "icon": "https://plausible.io/favicon.ico",
+              "id": "xiaohongshu",
+              "title": "小红书",
+              "description": "在小红书上分享产品故事和获取用户反馈",
+              "icon": "https://fe-video-qc.xhscdn.com/fe-platform/ed8fe781ce9e16c1bfac2cd962f0721edabe2e49.ico",
               "iconType": "image",
-              "link": "https://plausible.io"
+              "link": "https://www.xiaohongshu.com"
+            },
+            {
+              "id": "jike",
+              "title": "即刻",
+              "description": "在即刻上与创业者和开发者交流分享",
+              "icon": "https://web.okjike.com/favicon.ico",
+              "iconType": "image",
+              "link": "https://web.okjike.com"
+            },
+            {
+              "id": "v2ex",
+              "title": "V2EX",
+              "description": "在 V2EX 上与中文开发者社区交流",
+              "icon": "https://www.v2ex.com/favicon.ico",
+              "iconType": "image",
+              "link": "https://www.v2ex.com"
+            },
+            {
+              "id": "twitter",
+              "title": "Twitter",
+              "description": "在 Twitter 上建立个人品牌和产品影响力",
+              "icon": "https://twitter.com/favicon.ico",
+              "iconType": "image",
+              "link": "https://twitter.com"
             }
           ]
         }
