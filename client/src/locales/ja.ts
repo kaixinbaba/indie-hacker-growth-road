@@ -75,6 +75,22 @@ export default {
               "icon": "https://www.cypress.io/favicon.ico",
               "iconType": "image",
               "link": "https://www.cypress.io"
+            },
+            {
+              "id": "shipany",
+              "title": "Shipany",
+              "description": "ShipAnyは、AI SaaSスタートアッププロジェクトを構築するためのNextJSテンプレートです。豊富なテンプレートとコンポーネントで素早く開始できます。",
+              "icon": "https://shipany.ai/logo1.png",
+              "iconType": "image",
+              "link": "https://shipany.ai/"
+            },
+            {
+              "id": "supabase",
+              "title": "Supabase",
+              "description": "SupabaseはFirebaseのオープンソース代替です。Postgresデータベース、認証、インスタントAPI、エッジ関数、リアルタイムサブスクリプション、ストレージ、ベクター埋め込みでプロジェクトを開始できます。",
+              "icon": "https://supabase.com/favicon/apple-icon-152x152.png",
+              "iconType": "image",
+              "link": "https://supabase.com/"
             }
           ]
         },
@@ -164,7 +180,7 @@ export default {
               "id": "lemonsqueezy",
               "title": "LemonSqueezy",
               "description": "LemonSqueezyでデジタル製品の決済を素早く設定する",
-              "icon": "https://www.lemonsqueezy.com/favicon.ico",
+              "icon": "https://cdn.prod.website-files.com/6347244ba8d63489ba51c08e/6347244ba8d6341f3f51c0da_63071714fb42aa33dd948e49_favixon.webp",
               "iconType": "image",
               "link": "https://www.lemonsqueezy.com"
             }

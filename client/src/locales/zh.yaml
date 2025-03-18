@@ -53,6 +53,18 @@ stages:
             icon: https://www.cypress.io/favicon.ico
             iconType: image
             link: https://www.cypress.io
+          - id: shipany
+            title: Shipany
+            description: ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。通过丰富的模板和组件快速启动。
+            icon: https://shipany.ai/logo1.png
+            iconType: image
+            link: https://shipany.ai/
+          - id: supabase
+            title: Supabase
+            description: Supabase 是一个开源的 Firebase 替代品。你可以使用 Postgres 数据库、身份验证、即时应用程序编程接口（API）、边缘函数、实时订阅、存储和向量嵌入来启动你的项目。
+            icon: https://supabase.com/favicon/apple-icon-152x152.png
+            iconType: image
+            link: https://supabase.com/
       - id: tech-research
         title: 技术调研
         resources:
@@ -111,7 +123,7 @@ stages:
           - id: lemonsqueezy
             title: LemonSqueezy
             description: 使用 LemonSqueezy 快速设置数字产品支付
-            icon: https://www.lemonsqueezy.com/favicon.ico
+            icon: https://cdn.prod.website-files.com/6347244ba8d63489ba51c08e/6347244ba8d6341f3f51c0da_63071714fb42aa33dd948e49_favixon.webp
             iconType: image
             link: https://www.lemonsqueezy.com
 
